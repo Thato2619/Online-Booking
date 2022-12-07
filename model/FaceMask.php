@@ -7,16 +7,14 @@ class FaceMask {
     private $description;
     private $price;
     private $image;
-    private $type;
     private $availability = true;
 
-    public function __construct( $name, $description, $price, $image, $type)
+    public function __construct( $name, $description, $price, $image)
     {
         $this->name = $name;
         $this->description = $description;
         $this->price = $price;
         $this->image = $image;
-        $this->type = $type;
 
         $this->ID = $this->generateID();
     }
@@ -108,16 +106,6 @@ class FaceMask {
     }
     
 
-    #getter and setter for type
-    public function getType() {
-        return $this->type;
-    }
-    public function setType($type) {
-        return $this->type = $type;
-
-        return $this;
-    }
-
     #getter and setter for availabilty
     public function getAvailability() {
         return $this->availability;
@@ -128,9 +116,6 @@ class FaceMask {
         return $this;
     }
     
-
-
-
     
 }
 

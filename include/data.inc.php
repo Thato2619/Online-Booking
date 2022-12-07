@@ -8,7 +8,6 @@ $facemaskItems = [
         "description" => "Hydrating, with Vitamin C",
         "price" => 80,
         "image" => "https://www.pexels.com/photo/close-up-shot-of-cosmetic-product-8533216/",
-        "type" => "clay mask",
         "availability" => true,
     ],
 
@@ -17,7 +16,6 @@ $facemaskItems = [
         "description" => "Brightening, Contains Hyloronic Acid",
         "price" => 100,
         "image" => "https://www.pexels.com/photo/close-up-shot-of-cosmetic-product-8533214/",
-        "type" => "clay mask",
         "availability" => true,
     ],
 
@@ -26,7 +24,6 @@ $facemaskItems = [
         "description" => "Removes impurites, contain Saycilic Acid",
         "price" => 120,
         "image" => "https://www.pexels.com/photo/close-up-shot-of-cosmetic-product-8533212/",
-        "type" => "clay mask",
         "availabilty" => true,
     ]
 
