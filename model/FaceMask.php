@@ -10,13 +10,15 @@ class FaceMask {
     private $type;
     private $availability = true;
 
-    public function __construct($ID, $name, $description, $price, $image, $type)
+    public function __construct( $name, $description, $price, $image, $type)
     {
         $this->name = $name;
         $this->description = $description;
         $this->price = $price;
         $this->image = $image;
         $this->type = $type;
+
+        $this->ID = $this->generateID();
     }
 
     //methods
