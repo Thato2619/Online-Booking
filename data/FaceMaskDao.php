@@ -31,6 +31,15 @@ class FaceMaskDao {
         }
     }
     
+    //readbyID(all facemask products)
+    public function readById($DBConfig, $ID) {
+        //add connection bewteen database and facemask product
+        $connect = $DBConfig->connectToDatabase();
+
+        //see SQL statement
+        $sqlStmt = "SELECT * FROM FaceMask_products WHERE ID = $ID";
+        
+    }
     
 
 }
