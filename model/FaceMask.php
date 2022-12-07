@@ -12,7 +12,6 @@ class FaceMask {
 
     public function __construct($ID, $name, $description, $price, $image, $type)
     {
-        $this->ID = $ID;
         $this->name = $name;
         $this->description = $description;
         $this->price = $price;
@@ -46,6 +45,13 @@ class FaceMask {
                 return "<li style='color:red;> Out Of Stock</li>";
             }
         }
+    }
+
+    private function generateID() {
+        $randomIdNumber = rand(10000, 90000);
+        $id = md5($randomIdNumber);
+
+        return $this->ID;
     }
 
     // getters and setters
