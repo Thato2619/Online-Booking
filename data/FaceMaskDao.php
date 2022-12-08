@@ -64,8 +64,19 @@ class FaceMaskDao {
         //see SQL statement
         $sqlStmt = "UPDATE FaceMask_products SET Availability = '0' WHERE ID='".$FaceMask->getID()."'";
 
+        if($result = $connect->query($sqlStmt)) {
+            $connect->close();
+            return $result; //whether the result returns true or false
+        } else{
+            die($connect->error); //die function will cancel/kill any error that is not meant to be used, just in case
+            $connect->close(); 
 
+        }
 
+    }
+    //delete facemask products with corresponding ID
+    public function deleteById($DBConfig, $ID) {
+        
     }
     
 
