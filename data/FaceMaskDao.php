@@ -42,6 +42,16 @@ class FaceMaskDao {
         if($result = $connect->query($sqlStmt)) {
             //only gets single result
             $row = $result->fetch_object(); // returns PHP oject
+
+            if($row !== null) {
+
+                $facemask = FaceMask ::newFaceMaskFromDB($row);
+                $connect->close();
+                return $facemask; //whether the result returns true or false
+            }
+        } else {
+            die($connect->error);//
+            $connect->close();
         }
 
     }
