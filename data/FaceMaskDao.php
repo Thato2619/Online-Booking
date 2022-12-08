@@ -81,6 +81,7 @@ class FaceMaskDao {
     public function readAll() {
          //add connection bewteen database and facemask product
          $connect = $DBConfig->connectToDatabase();
+         $productData = [];
     }
     //delete facemask products with corresponding ID
     public function deleteById($DBConfig, $ID) {
