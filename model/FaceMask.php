@@ -49,7 +49,7 @@ class FaceMask {
 
     public function checkAvailableStock(){
         if ($this->availability) {
-            if ($this->available) {
+            if ($this->availability) {
                 return "<li style='color:green;'>Available</li>";
             } else {
                 return "<li style='color:red;> Out Of Stock</li>";

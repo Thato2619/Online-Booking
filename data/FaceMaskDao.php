@@ -50,9 +50,15 @@ class FaceMaskDao {
                 return $facemask; //whether the result returns true or false
             }
         } else {
-            die($connect->error);//
+            die($connect->error); //die function will cancel/kill any error that is not meant to be used, just in case
             $connect->close();
         }
+
+    }
+
+    // update available stock 
+    public function updateAvailableStock($DBConfig, $availability ) {
+        
 
     }
     
