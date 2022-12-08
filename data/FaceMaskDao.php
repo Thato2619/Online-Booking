@@ -39,6 +39,7 @@ class FaceMaskDao {
         //see SQL statement
         $sqlStmt = "SELECT * FROM FaceMask_products WHERE ID = $ID";
 
+        //send in request
         if($result = $connect->query($sqlStmt)) {
             //only gets single result
             $row = $result->fetch_object(); // returns PHP oject
@@ -64,6 +65,7 @@ class FaceMaskDao {
         //see SQL statement
         $sqlStmt = "UPDATE FaceMask_products SET Availability = '0' WHERE ID='".$FaceMask->getID()."'";
 
+        //send in request
         if($result = $connect->query($sqlStmt)) {
             $connect->close();
             return $result; //whether the result returns true or false
@@ -83,24 +85,16 @@ class FaceMaskDao {
          //see SQL statement
          $sqlStmt = "DELETE FROM  FaceMask_products WHERE ID=$ID";
 
+         //send in request
+         if($result = $connect->query($sqlStmt)) {
+             $connect->close();
+             return $result;
+         } else {
+             die("Connection failed: " . $connect->error);  //die function will cancel/kill any error that is not meant to be used, just in case
+         }
+
+
     }
     
 
 }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
