@@ -76,7 +76,8 @@ class FaceMaskDao {
     }
     //delete facemask products with corresponding ID
     public function deleteById($DBConfig, $ID) {
-        
+         //add connection bewteen database and facemask product
+        $connect = $DBConfig->connectToDatabase();
     }
     
 
