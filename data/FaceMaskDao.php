@@ -57,9 +57,14 @@ class FaceMaskDao {
     }
 
     // update available stock 
-    public function updateAvailableStock($DBConfig, $availability ) {
-          //add connection bewteen database and facemask product
-          $connect = $DBConfig->connectToDatabase();
+    public function updateAvailableStock($DBConfig, $FaceMask ) {
+         //add connection bewteen database and facemask product
+        $connect = $DBConfig->connectToDatabase();
+
+        //see SQL statement
+        $sqlStmt = "UPDATE FaceMask_products SET Availability = '0' WHERE ID='".$FaceMask->getID()."'";
+
+
 
     }
     
