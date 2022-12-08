@@ -81,10 +81,23 @@ class FaceMaskDao {
     public function readAll($DBConfig) {
          //add connection bewteen database and facemask product
          $connect = $DBConfig->connectToDatabase();
-         $productData = [];
+         $faceMaskData = [];
 
          //see SQL statement
         $sqlStmt = "SELECT * FROM  FaceMask_products";
+
+        //use while-loop to loop over array of facemask data
+        if($result = $connect->query($sqlStmt)) {
+            while($row = $result->fetch_object()) {
+                $faceMaskObj = FaceMask ::newFaceMaskFromDB($row);
+                array_push($faceMaskData, $faceMaskObj);
+            }
+            $connect->close();
+            return $faceMaskData;
+        } else {
+            die($connect->error. "<br><br>"); //die function will cancel/kill any error that is not meant to be used, just in case
+            $connect->close(); //close all connection
+        }
 
     }
     //delete facemask products with corresponding ID
