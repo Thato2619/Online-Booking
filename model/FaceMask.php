@@ -20,6 +20,16 @@ class FaceMask {
     }
 
     //methods
+
+    #create static function method to create from the database
+    public static function newFaceMaskFromDB($row) {
+        $facemask = new FaceMask($row->name, $row->description, $row->price, $row->image);
+        $facemask->setID($row->ID);
+        $facemask->setAvailabilty($row->availability);
+
+        return $facemask;
+        
+    }
     // if returns true, then facemasks are available for sale,
     // if returns false, facemask are out of stock
     public function faceMaskSell() {

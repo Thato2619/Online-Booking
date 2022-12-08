@@ -38,7 +38,12 @@ class FaceMaskDao {
 
         //see SQL statement
         $sqlStmt = "SELECT * FROM FaceMask_products WHERE ID = $ID";
-        
+
+        if($result = $connect->query($sqlStmt)) {
+            //only gets single result
+            $row = $result->fetch_object(); // returns PHP oject
+        }
+
     }
     
 
