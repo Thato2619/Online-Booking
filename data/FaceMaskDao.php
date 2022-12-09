@@ -1,10 +1,15 @@
 <?php 
 //include files from model and config folder
 require_once __DIR__ . "/../model/FaceMask.php";
-#require_once __DIR__ . "/../config/DBConfig.php";
+require_once __DIR__ . "/../config/DBConfig.php";
 
 
 class FaceMaskDao {
+    // Fields
+    private DBConfig $DBConfig;
+    private $table = "FaceMask_products";
+
+    
     //create facemask products
     public function createFaceMask($DBConfig, $FaceMask) {
 
@@ -81,6 +86,7 @@ class FaceMaskDao {
     public function readAll($DBConfig) {
          //add connection bewteen database and facemask product
          $connect = $DBConfig->connectToDatabase();
+         $callDBconfig = $DBConfig :: connectToDatabse();
          $faceMaskData = [];
 
          //see SQL statement
@@ -101,7 +107,7 @@ class FaceMaskDao {
 
     }
     //delete facemask products with corresponding ID
-    public function deleteById($DBConfig, $ID) {
+    function deleteById($DBConfig, $ID) {
          //add connection bewteen database and facemask product
         $connect = $DBConfig->connectToDatabase();
 
@@ -120,5 +126,5 @@ class FaceMaskDao {
 
     }
     
-
 }
+

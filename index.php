@@ -43,6 +43,6 @@ if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
     <title>Glistening-Glow</title>
 </head>
 <body>
-    
+    <h1>Glisten baby</h1>
 </body>
 </html>
