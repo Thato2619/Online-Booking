@@ -92,7 +92,7 @@ if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
         lg:mt-0
         mr-1
       " href="#">
-    <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" style="height: 15px" alt=""
+    <img src="/static/Images/online_store_logo.png" style="height: 15px" alt=""
       loading="lazy" />
   </a>
   <!-- Left links -->
