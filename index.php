@@ -18,7 +18,7 @@ $faceMaskDao = new FaceMaskDao($dbConfig);
 
 
 #load facemask data from database
-$faceMaskData = $faceMaskDao->readAll($dbConfig);
+//$faceMaskData = $faceMaskDao->readAll();
 
 #create outOfStock handler using sessions
 if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
@@ -34,15 +34,14 @@ if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
 }
 ?>
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glistening-Glow</title>
-</head>
-<body>
-    <h1>Glisten baby</h1>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+  </body>
 </html>

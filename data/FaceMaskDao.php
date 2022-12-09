@@ -5,25 +5,31 @@ require_once __DIR__ . "/../config/DBConfig.php";
 
 
 class FaceMaskDao {
-    // Fields
-    private DBConfig $DBConfig;
-    private $table = "FaceMask_products";
 
-    
+    //fields 
+    private DBConfig $DBConfig;
+    private $table = $FaceMask_products;
+
+    public function __construct()
+    {
+        $this->DBConfig = $DBConfig;
+    }
+
+    //these are methods
     //create facemask products
-    public function createFaceMask($DBConfig, $FaceMask) {
+    public function createFaceMask(FaceMask $faceMask) {
 
         //add connection bewteen database and facemask product
-        $connect = $DBConfig->connectToDatabase();
+        $connect =$this->DBConfig = $DBConfig;
         
         //see SQL statement
         $sqlStmt = "INSERT INTO FaceMask_products (ID, Name, Description, Price, Image, Availability)" . "VALUES(
-            '".$FaceMask->getID()."',
-            '".$FaceMask->getName()."',
-            '".$FaceMask->getDescription()."',
-            '".$FaceMask->getPrice()."',
-            '".$FaceMask->getImage()."',
-            '".$FaceMask->getAvailability()."')";
+            '".$faceMask->getID()."',
+            '".$faceMask->getName()."',
+            '".$faceMask->getDescription()."',
+            '".$faceMask->getPrice()."',
+            '".$faceMask->getImage()."',
+            '".$faceMask->getAvailability()."')";
 
         //send in request 
         if($result = $connect->query($sqlStmt)) {
@@ -36,6 +42,32 @@ class FaceMaskDao {
         }
     }
     
+    //update all items in the FaceMask_products 
+    public function update(FaceMask $faceMask) {
+
+        $conn = $this->databaseConfig->connect();
+
+        $statement = "UPDATE FaceMask_products
+                      SET Name = '".$faceMask->getName()."',
+                          Description = '".$faceMask->getDescription()."',
+                          Price = '".$faceMask->getPrice()."',
+                          Image = '".$faceMask->getImage()."',
+                          Availability = '".$availability->getAvailability()."',
+                      WHERE ID='".$car->getId()."'
+        ";
+
+        if ($result = $conn->query($statement)) {
+
+            $conn->close();
+            return $result;
+
+        } else {
+
+            die($conn->error); //die function to close connection in case of error
+            $conn->close();
+         
+        }
+    }
     //readbyID(all facemask products)
     public function readById($DBConfig, $ID) {
         //add connection bewteen database and facemask product
@@ -83,10 +115,10 @@ class FaceMaskDao {
     }
 
     //read all facemask products 
-    public function readAll($DBConfig) {
+    public function readAll() {
          //add connection bewteen database and facemask product
-         $connect = $DBConfig->connectToDatabase();
-         $callDBconfig = $DBConfig :: connectToDatabse();
+         $connect = $this->DBConfig = $DBConfig;
+
          $faceMaskData = [];
 
          //see SQL statement
@@ -126,5 +158,5 @@ class FaceMaskDao {
 
     }
     
-}
+
 
