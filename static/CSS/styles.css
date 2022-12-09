@@ -1,1 +1,36 @@
+@import url(//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
+@import url(//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,800,700,900);
 
+/*add nav  button*/
+.navButton{
+    margin-left: 45%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    padding: 0 20px;
+    color: #000;
+    transition: 0.4s ease;
+}
+
+/* create hover effect in navbar*/
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar i:hover,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar i:hover{
+    color: #E69A8DFF;
+}
+
+/*create space between icons*/
+.navbar i {
+    font-size: 1.2rem;
+}
