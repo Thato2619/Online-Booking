@@ -42,6 +42,10 @@ if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
     <title>Bootstrap demo</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Hello!</h1>
   </body>
 </html>
+
+<!-- all credits from images from pexel
+Photo by Anna Nekrashevich: https://www.pexels.com/photo/close-up-shot-of-cosmetic-products-8533265/
+ -->
