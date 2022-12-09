@@ -12,6 +12,10 @@ require_once __DIR__ . "/model/FaceMask.php";
 
 session_start();
 
+#  add FaceMaskDao and Database objects
+$dbConfig = new DBConfig();
+$faceMaskDao = new FaceMaskDao($dbConfig);
+
 
 
 
