@@ -17,7 +17,8 @@ $dbConfig = new DBConfig();
 $faceMaskDao = new FaceMaskDao($dbConfig);
 
 
-
+#load facemask data from database
+$faceMaskData = $faceMaskDao->readAll($dbConfig);
 
 
 
