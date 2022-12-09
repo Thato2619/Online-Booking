@@ -20,26 +20,17 @@ $faceMaskDao = new FaceMaskDao($dbConfig);
 #load facemask data from database
 $faceMaskData = $faceMaskDao->readAll($dbConfig);
 
+#create outOfStock handler using sessions
+if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
 
+    echo "
+    <script>
+        alert('There seems  that the faemask product that you are looking to purchase is out of stock)
+    </script>
+    
+    ";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    unset($_SESSION['outOfStock']);
+}
 ?>
+
