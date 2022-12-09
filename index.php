@@ -50,7 +50,7 @@ if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
 <!-- NAVBAR --->
   <nav class="navbar navbar-expand-lg bg-light py-3 fixed-top">
   <div class="container-fluid">
-    <img/>
+    <img src="static/Images/online_store_logo.png"/>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
