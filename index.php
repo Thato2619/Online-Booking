@@ -40,6 +40,7 @@ if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="static/CSS/styles.css">
   </head>
   <body>
     <h1>Hello!</h1>
