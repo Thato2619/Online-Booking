@@ -1,6 +1,6 @@
 <?php 
 //include files from model and config folder
-require_once __DIR__ . "/../model/FaceMask.php";
+/*require_once __DIR__ . "/../model/FaceMask.php";
 #require_once __DIR__ . "/../config/DBConfig.php";
 
 
@@ -99,7 +99,7 @@ class FaceMaskDao {
             $connect->close(); //close all connection
         }*/
 
-    }
+   /* }
     //delete facemask products with corresponding ID
     function deleteById($DBConfig, $ID) {
          //add connection bewteen database and facemask product
@@ -118,7 +118,7 @@ class FaceMaskDao {
          }
 
 
-    }
+    }*/
     
 
 
