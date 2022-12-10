@@ -91,13 +91,20 @@ if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
     </div>
     </nav>
 
+ 
+    <!------- card image with banner ------->
+
+   
+
+
     <!------- Product items with cards ------->
     <div class="card" style="width: 18rem;">
   <img src="./static/Images/Ala-Rasi.jpeg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Ala Rasi</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-primary">Add To Cart</a>
+    <a href="#" class="btn btn-primary">View Product</a>
   </div>
 </div>
 
@@ -106,7 +113,8 @@ if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
   <div class="card-body">
     <h5 class="card-title">Hygge</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-primary">Add To Cart</a>
+    <a href="#" class="btn btn-primary">View Product</a>
   </div>
 </div>
 
@@ -115,7 +123,8 @@ if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
   <div class="card-body">
     <h5 class="card-title">Eudaimonia</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-primary">Add To Cart</a>
+    <a href="#" class="btn btn-primary">View Product</a>
   </div>
 </div>
 
