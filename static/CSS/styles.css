@@ -7,6 +7,5 @@
 
 /*style content in the card layout */
 .card-img-top{
-  
-    
+    display: flexbox;
 }
