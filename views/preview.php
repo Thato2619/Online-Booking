@@ -16,6 +16,15 @@ $faceMaskDao = new FaskMaskDao($dbConfig);
 
 
 $faceMaskData = $faceMaskDao->readAll();
+
+//request handling on view facemask product
+if(isset($_GET['previewFaceMask'])) {
+    //load facemask product by using FaceMaskDAO class(get it by ID)
+    $_SESSION['previewedMask'] = $faceMaskDao->readById($_GET['faceMaskID']);
+    $previewedMask = $_SESSION['previewedMask'];
+}
+
+
 ?>
 
 <!DOCTYPE html>
