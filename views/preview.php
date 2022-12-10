@@ -24,7 +24,16 @@ if(isset($_GET['previewFaceMask'])) {
     $previewedMask = $_SESSION['previewedMask'];
 }
 
+//buy the facemask
+if(isset($_POST['buyFaceMask'])) {
+    //result of saved facemask to be saved in 
+    $result = $_SESSION['previewedMask']->faceMaskSell();
+    $faceMaskDao->updateSellFaceMask($_SESSION['previewFaceMask']);
 
+    if($result) {
+        
+    }
+}
 ?>
 
 <!DOCTYPE html>
