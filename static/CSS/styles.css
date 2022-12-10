@@ -1,0 +1,12 @@
+/*style page make sure */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*style content in the card layout */
+.card-img-top {
+    width: 100%;
+    height: max-content;
+}
