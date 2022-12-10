@@ -44,7 +44,10 @@ if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- Bootstrap --->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--- CSS Link --->
+    <link rel="stylesheet" href="./static/CSS/styles.css">
     <title>Document</title>
 </head>
 <body>
@@ -86,27 +89,30 @@ if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
 
  <!----- add three cards from bootstrap------>
  <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="./static/Images/Ala-Rasi.jpeg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Ala-Rasi</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-primary">Go To Cart</a>
+    <a href="#" class="btn btn-primary">Preview</a>
   </div>
 </div>
 <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="./static/Images/Eudaimonia.jpeg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Eudaimonia</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-primary">Go To Cart</a>
+    <a href="#" class="btn btn-primary">Preview</a>
   </div>
 </div>
 <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="./static/Images/Hygge.jpeg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Hygge</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-primary">Go To Cart</a>
+    <a href="#" class="btn btn-primary">Preview</a>
   </div>
 </div>
 
