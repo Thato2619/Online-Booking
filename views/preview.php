@@ -31,7 +31,13 @@ if(isset($_POST['buyFaceMask'])) {
     $faceMaskDao->updateSellFaceMask($_SESSION['previewFaceMask']);
 
     if($result) {
-        
+        //lead customer to checkout page with total amount
+        header("Location:./checkout.php");
+    } else {
+        //lead customer back to index.php
+        $_SESSION['outOfStock'] = true;
+
+        header("Location:./../index.php");
     }
 }
 ?>
