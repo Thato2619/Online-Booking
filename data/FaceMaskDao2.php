@@ -110,7 +110,7 @@ class FaskMaskDao {
     //  update whole car 
     public function update(FaceMask $FaceMask_products) {
 
-        $connect = $this->dbConfig->connectToDatabse()
+        $connect = $this->dbConfig->connectToDatabse();
 
         $sqlStatement = "UPDATE FaceMask_products
                       SET Name = '".$FaceMask_products->getName()."',
