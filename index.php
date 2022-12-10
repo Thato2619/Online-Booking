@@ -94,7 +94,7 @@ if (isset($_SESSION['outOfStock']) && $_SESSION['outOfStock'] == true) {
     <h5 class="card-title">Ala-Rasi</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go To Cart</a>
-    <a href="#" class="btn btn-primary">Preview</a>
+    <a href="./views/preview.php" class="btn btn-primary">Preview</a>
   </div>
 </div>
 <div class="card" style="width: 18rem;">
