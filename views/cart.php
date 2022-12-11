@@ -12,32 +12,31 @@
     if(isset($_POST['add_to_cart'])) {
         if(isset($_SESSION['cart'])) {
             $session_aray_name = array_column($_SESSION['cart'], "name");
-        }else{
-            $session_array = array(
-                "id" => $_GET['id'],
-                "name" => $_POST['name'],
-                "price" => $_POST['price'],
-                "quantity" => $_POST['quantity'],
 
-            );
+            if(!in_array($_GET['name'], $session_aray_name)){
+                $session_array = array(
+                    "id" => $_GET['id'],
+                    "name" => $_POST['name'],
+                    "price" => $_POST['price'],
+                    "quantity" => $_POST['quantity'],
+                );
+                $_SESSION['cart'][] = $session_array;
+            }
         }
-    
-
+            
+        
     }
-    //create cart session to preview
-    //initialise cart if not set 
-    if(!isset($_SESSION['cart'])) {
-      $_SESSION['cart'] = $facemaskItems;
-
-      //unset quantity
-      unset($_SESSION['qty_array']);
-    }
-
-
-
-
-
-
-
-
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
