@@ -8,7 +8,7 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    //create cart session to preview
+    
     
 
     // includes and session
@@ -19,6 +19,7 @@
 
     session_start();
     
+    //create cart session to preview
     //initialise cart if not set 
     if(!isset($_SESSION['cart'])) {
       $_SESSION['cart'] = $facemaskItems;
