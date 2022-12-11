@@ -63,11 +63,12 @@ if(isset($_POST['buyFaceMask'])) {
             <li>".$previewedMask->getImage()."</li>
             <li>".$previewedMask->getAvailabilty()."</li>
         </ul>
+        <form '".$_SERVER['PHP_SELF']."' method='post'>
+            <input type='hidden' name='faceMaskID' value='".$previewedMask->getID()."'>
+            <button type='submit' name='buyFaceMask' value='true'>BUY</button>
+        </form>
         
-        
-        
-        
-        "
+        ";
         
         
         ?>
