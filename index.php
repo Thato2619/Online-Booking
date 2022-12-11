@@ -8,13 +8,25 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
+    //create cart session to preview
+    
+
     // includes and session
     require_once __DIR__ . "/model/FaceMask.php";
     require_once __DIR__ . "/data/FaceMaskDao2.php";
     require_once __DIR__ . "/config/DBConfig.php";
+    include_once __DIR__ . "/include/data.inc.php";
 
     session_start();
     
+    //initialise cart if not set 
+    if(!isset($_SESSION['cart'])) {
+      $_SESSION['cart'] = $facemaskItems;
+
+      //unset quantity
+      unset($_SESSION['qty_array']);
+    }
+
     //create database object and facemaskdao object
     $dbConfig = new DBConfig();
     $faceMaskDao = new FaskMaskDao($dbConfig);
