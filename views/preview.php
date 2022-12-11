@@ -48,9 +48,29 @@ if(isset($_POST['buyFaceMask'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><?php echo $previewedMask->getName(). " ". $previewedMask->getDescription() ?></title> <!---- maybe add bootstrap card here, even link cdn links ----->
 </head>
 <body>
-    <h1> hello </h1>
+    <div class="card-item">
+
+        <?php 
+        echo "
+        <img src='" . $previewedMask->getImage() . "' alt='thumb' width=350 height=200>
+        <ul>
+            <li>".$previewedMask->getName()."</li>
+            <li>".$previewedMask->getDescription()."</li>
+            <li>".$previewedMask->getPrice()."</li>
+            <li>".$previewedMask->getImage()."</li>
+            <li>".$previewedMask->getAvailabilty()."</li>
+        </ul>
+        
+        
+        
+        
+        "
+        
+        
+        ?>
+    </div>
 </body>
 </html>
