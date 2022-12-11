@@ -8,13 +8,16 @@
   // require files
   require_once __DIR__ . "/../model/FaceMask.php";
   require_once __DIR__ . "/../data/FaceMaskDao2.php";
-  include_once __
+  include_once __DIR__ . "/../include/data.inc.php";
 
 session_start();
 
 //add to cart session 
-//create conditional statemeny is in cart
-if(!$faceMss)
+//create conditional statement is in cart
+if(!$facemaskItems($_GET['name'], $_SESSION['cart'])){
+    array_push($_SESSION['cart'], $_GET['name']);
+    $_SESSION['message'] = "You have the item in cart";
+}
 
 $dbConfig = new DBConfig();
 $faceMaskDao = new FaskMaskDao($dbConfig);
