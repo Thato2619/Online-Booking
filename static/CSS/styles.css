@@ -16,3 +16,14 @@
 .navbar-brand:hover{
     color: coral;
 }
+
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.nav-link:hover{
+    color: coral;
+}
