@@ -5,8 +5,14 @@
     padding: 0;
 }
 
-/*style content in the card layout */
-.card-img-top{
-    display: flexbox;
+
+
+/*Design of LOGO */
+.navbar-brand{
+    font-size: 2rem;
+    color: black;
 }
 
+.navbar-brand:hover{
+    color: coral;
+}
