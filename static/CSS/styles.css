@@ -54,9 +54,43 @@
 }
 
 .main{
-    background: url(/static/Images/galley2.jpeg);
+    background: url(/static/Images/pexels-angela-roma-7479816.jpeg);
     background-size: cover;
     height: 100vh;
     background-position: 50% 50%;
     width:100%;
+}
+
+.main h1{
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+}
+
+
+
+.btn1{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: coral;
+    color: white;
+    font-weight: 700;
+}
+
+.col-lg-7{
+    padding: 5;
+    text-align: center;
+}
+
+.product{
+    display: flex;
+    justify-content: center;
+    color: coral;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
 }
