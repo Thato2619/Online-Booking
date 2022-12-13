@@ -53,3 +53,10 @@
     font-weight: 700;
 }
 
+.main{
+    background: url(/static/Images/galley2.jpeg);
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+    width:100%;
+}
