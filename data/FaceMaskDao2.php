@@ -163,7 +163,7 @@ class FaskMaskDao {
 
         //delete from the ID of the from the facemask id
          //see SQL statement
-         $sqlStatement = "DELETE FROM  FaceMask_products WHERE ID="$ID;
+         $sqlStatement = "DELETE FROM FaceMask_products WHERE Name='".$FaceMask_products->getName()."' ";
 
          //send in request
          if($result = $connect->query($sqlStatement)) {
