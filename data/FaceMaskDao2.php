@@ -9,7 +9,7 @@ class FaskMaskDao {
 
     // ======= Fields =======
 
-    private DBConfig $dbConfig;
+    private $dbConfig;
     private $tableName = "FaceMask_products";
 
     // ===== Constructor =====
@@ -22,7 +22,7 @@ class FaskMaskDao {
 
     // ===== Methods ====
 
-    // =================================== create new car ===================================
+    // =================================== create  ===================================
     public function create(FaceMask $FaceMask_products) {
 
         $connect = $this->dbConfig->connectToDatabse();
@@ -50,7 +50,7 @@ class FaskMaskDao {
         }
     }
 
-    // =================================== Read all cars from database ===================================
+    // =================================== Read all  ===================================
     public function readAll() {
 
         $connect = $this->dbConfig->connectToDatabse();
