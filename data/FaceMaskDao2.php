@@ -8,8 +8,7 @@ require_once __DIR__ . "/../model/FaceMask.php";
 class FaskMaskDao {
 
     // ======= Fields =======
-
-    private $dbConfig;
+    private $dbConfig = DBConfig;
     private $tableName = "FaceMask_products";
 
     // ===== Constructor =====
@@ -164,7 +163,7 @@ class FaskMaskDao {
 
         //delete from the ID of the from the facemask id
          //see SQL statement
-         $sqlStatement = "DELETE FROM  FaceMask_products WHERE ID=$ID";
+         $sqlStatement = "DELETE FROM  FaceMask_products WHERE ID="$ID;
 
          //send in request
          if($result = $connect->query($sqlStatement)) {
@@ -175,4 +174,4 @@ class FaskMaskDao {
          }
     }
 
-}
+};
