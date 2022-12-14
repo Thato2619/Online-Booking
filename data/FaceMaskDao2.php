@@ -21,7 +21,7 @@ class FaskMaskDao {
 
     // ===== Methods ====
 
-    // =================================== create  ===================================
+    // ================= create  =====================
     public function create(FaceMask $FaceMask_products) {
 
         $connect = $this->dbConfig->connectToDatabse();
@@ -49,7 +49,7 @@ class FaskMaskDao {
         }
     }
 
-    // =================================== Read all  ===================================
+    // ========================= Read all  ==========================
     public function readAll() {
 
         $connect = $this->dbConfig->connectToDatabse();
@@ -81,7 +81,7 @@ class FaskMaskDao {
     }
 
 
-    // laod car by id 
+    // load facemask by ID
     public function readById($ID) {
 
         $connect = $this->dbConfig->connectToDatabse();
@@ -107,7 +107,7 @@ class FaskMaskDao {
         }
     }
 
-    //  update whole car 
+    //  Update the entire Facemask products 
     public function update(FaceMask $FaceMask_products) {
 
         $connect = $this->dbConfig->connectToDatabse();
@@ -157,13 +157,13 @@ class FaskMaskDao {
         }
     }
 
-    // deletes a car by id   
+    // deletes a Facemask_products by id   
     public function deleteById(FaceMask $FaceMask_products){
         $connect = $dbConfig->connectToDatabase();
 
         //delete from the ID of the from the facemask id
          //see SQL statement
-         $sqlStatement = "DELETE FROM FaceMask_products WHERE Name='".$FaceMask_products->getName()."' ";
+         $sqlStatement = "DELETE FROM  FaceMask_products WHERE ID='".$FaceMask_products->getID()"'";
 
          //send in request
          if($result = $connect->query($sqlStatement)) {
